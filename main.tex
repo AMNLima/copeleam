@@ -1,0 +1,71 @@
+%%
+% Escolha um
+%% doc
+\newcommand{\doc}{dsc}
+%\newcommand{\doc}{msc}
+%\newcommand{\doc}{prm}
+%\newcommand{\doc}{prd}
+%\newcommand{\doc}{qlf}
+%
+\documentclass[\doc]{cls/copeleam}
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%%
+% Escolha um
+%% png
+\usepackage[pdftex]{graphicx}
+\graphicspath{{cls/},{src/png/}}
+\DeclareGraphicsExtensions{.png}
+%% eps
+%\usepackage[dvips]{graphicx}
+%\graphicspath{{cls/},{src/eps/}}
+%\DeclareGraphicsExtensions{.eps}
+%
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil,english]{babel}
+\usepackage{notoccite}
+%
+\usepackage[num,abnt-etal-list=0,bibjustif,abnt-full-initials=yes]{abntex2cite}
+\citebrackets[]
+%
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+%
+\usepackage{lipsum} %para gerar texto aleatorio - remova
+%
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+\begin{document}
+\selectlanguage{brazil}
+\Titulo{Ajudando na edição de textos científicos}
+\Autor{Kwisatz Haderach}
+\Data{\today}
+%%
+% Escolha um
+%\Area{Processamento da Energia}
+\Area{Processamento da Informação}
+%
+\PaginadeRosto
+\input{inc/\doc.tex}
+\pagenumbering{arabic}
+\setcounter{page}{0}
+\Introducao
+%
+\input{src/cap2/cap2.tex}
+\input{src/cap3/cap3.tex}
+\input{src/cap4/cap4.tex}
+\input{src/cap5/cap5.tex}
+%
+\Conclusao
+%%
+\appendix
+\input{src/apendice/apendice.tex}
+%%
+\bibliography{src/bib/main}
+%
+\end{document}

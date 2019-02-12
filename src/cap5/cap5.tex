@@ -1,0 +1,174 @@
+%TCIDATA{LaTeXparent=0,0,main.tex}
+
+\chapter{Pictures}
+
+Leslie Lamport~\citeauthor{lamport:latex} says "Thinking doesn't guarantee that we won't make mistakes. But not thinking guarantees that we will.". 
+
+\section{\LaTeX and \TeX}
+You can create pictures within \LaTeX {}\ using a limited set of
+picture symbols. These include vector, line, oval, and others. For
+more information you should refer to the \LaTeX {}\ manual
+\cite{lamport:latex}.
+\begin{figure}[htbp]
+\centering  
+\begin{picture}(100,100)(0,0)
+\put(60,70){\vector(1,0){15}}
+\put(65,80){$\theta^+$}
+\put(60,40){\line(1,2){20}}
+\put(60,40){\line(0,1){40}}
+\put(60,40){\oval(40,40)[l]}
+\put(60,20){\line(0,1){40}}
+\put(0,40){\vector(1,0){40}}
+\put(0,43){flow}
+\put(20,22){\line(10,0){60}}
+\put(20,22){\circle{20}}
+\put(60,22){\oval(40,20)[r]}
+\end{picture}
+\caption{Simple picture created with \LaTeX\ .}
+\end{figure}
+
+The above picture was made with the following \LaTeX {}\ code:
+\begin{verbatim}
+\begin{figure}[htbp]
+\centering  
+\begin{picture}(100,100)(0,0)
+\put(60,70){\vector(1,0){15}}
+\put(65,80){$\theta^+$}
+\put(60,40){\line(1,2){20}}
+\put(60,40){\line(0,1){40}}
+\put(60,40){\oval(40,40)[l]}
+\put(60,20){\line(0,1){40}}
+\put(0,40){\vector(1,0){40}}
+\put(0,43){flow}
+\put(20,22){\line(10,0){60}}
+\put(20,22){\circle{20}}
+\put(60,22){\oval(40,20)[r]}
+\end{picture}
+\caption{Simple picture created with \LaTeX\ .}
+\end{figure}
+\end{verbatim}
+%
+\begin{figure}[htbp]
+\centering  
+\setlength{\unitlength}{1cm} 
+\begin{picture}(5,5)(0,0)
+\linethickness{2pt} 
+\put(0,0){\vector(1,2){1}}	
+\put(2,3){\vector(2,3){1}}	
+\put(2.2,3.2){$a_1$}	
+\end{picture} 
+\caption{Simple vectors created with \LaTeX\ .}
+\end{figure}
+%
+\begin{figure}[htbp]
+\centering  
+\setlength{\unitlength}{1pt} 
+\begin{picture}(200,200)(0,0) 
+\linethickness{2pt} 
+\bezier{20}(0,0)(10,30)(50,30) 
+\bezier{200}(0,0)(40,0)(50,30) 
+\thinlines 
+\put(0,0){\circle*{1}} 
+\put(0,0){\line(1,3){10}}	
+\put(0,-1){\makebox(0,0)[t]{A}}	
+\put(10,30){\circle*{1}} 
+\put(10,31){\makebox(0,0)[b]{B}} 
+\put(50,30){\circle*{1}} 
+\put(50,30){\line(-1,0){40}} 
+\put(50,31){\makebox(0,0)[b]{C}} 
+\end{picture} 
+\caption{Simple arc picture created with \LaTeX\ .}
+\end{figure}
+%
+\begin{figure}[htbp]
+\centering  
+\setlength{\unitlength}{1pt} 
+\begin{picture}(200,200)(0,0) 
+\linethickness{2pt} 
+\bezier{20}(0,0)(10,30)(50,30) 
+\bezier{200}(0,0)(40,0)(50,30) 
+\thinlines 
+\put(0,0){\circle*{1}} 
+\put(0,0){\line(1,3){10}}	
+\put(0,-1){\makebox(0,0)[t]{C}}	
+\put(10,30){\circle*{1}} 
+\put(10,31){\makebox(0,0)[b]{D}} 
+\put(50,30){\circle*{1}} 
+\put(50,30){\line(-1,0){40}} 
+\put(50,31){\makebox(0,0)[b]{E}} 
+\end{picture} 
+\caption{Simple arc picture created with \LaTeX\ .}
+\end{figure}
+
+
+Another way to get pictures in your \LaTeX \ document is to use
+plain \TeX {}\ commands; see The \TeX \ book \cite{knuth:tex}.
+
+\section{TikZ}
+There are other and more powerful tools to create graphic elements in LATEX. Tikz is probably the most complex and powerful tool to create graphics for \LaTeX\ . Here follows an example to show the basic features of TikZ package to draw a quite common control system block diagram.
+\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=2cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\begin{figure}[!ht]
+\centering
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=3cm,>=latex']
+    % We start by placing the blocks
+    \node [input, name=input] {};
+    \node [sum, right of=input] (sum) {};
+    \node [block, right of=sum] (controller) {Controller};
+    \node [block, right of=controller, pin={[pinstyle]above:Disturbances},
+            node distance=4cm] (system) {System};
+    % We draw an edge between the controller and system block to 
+    % calculate the coordinate u. We need it to place the measurement block. 
+    \draw [->] (controller) -- node[name=u] {$u$} (system);
+    \node [output, right of=system] (output) {};
+    \node [block, below of=u] (measurements) {Measurements};
+    % Once the nodes are placed, connecting them is easy. 
+    \draw [draw,->] (input) -- node {$r$} (sum);
+    \draw [->] (sum) -- node {$e$} (controller);
+    \draw [->] (system) -- node [name=y] {$y$}(output);
+    \draw [->] (y) |- (measurements);
+    \draw [->] (measurements) -| node[pos=0.99] {$-$} 
+        node [near end] {$y_m$} (sum);
+\end{tikzpicture}
+\caption{Block diagram of a closed-loop control system.}
+\end{figure}
+The above picture was made with the following TikZ code:
+
+\begin{verbatim}
+\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=2cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\begin{figure}[!ht]
+\centering
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=3cm,>=latex']
+    % We start by placing the blocks
+    \node [input, name=input] {};
+    \node [sum, right of=input] (sum) {};
+    \node [block, right of=sum] (controller) {Controller};
+    \node [block, right of=controller, pin={[pinstyle]above:Disturbances},
+            node distance=4cm] (system) {System};
+    % We draw an edge between the controller and system block to 
+    % calculate the coordinate u. We need it to place the measurement block. 
+    \draw [->] (controller) -- node[name=u] {$u$} (system);
+    \node [output, right of=system] (output) {};
+    \node [block, below of=u] (measurements) {Measurements};
+    % Once the nodes are placed, connecting them is easy. 
+    \draw [draw,->] (input) -- node {$r$} (sum);
+    \draw [->] (sum) -- node {$e$} (controller);
+    \draw [->] (system) -- node [name=y] {$y$}(output);
+    \draw [->] (y) |- (measurements);
+    \draw [->] (measurements) -| node[pos=0.99] {$-$} 
+        node [near end] {$y_m$} (sum);
+\end{tikzpicture}
+\caption{Block diagram of a closed-loop control system.}
+\end{figure}
+\end{verbatim}

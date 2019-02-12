@@ -1,0 +1,30 @@
+%TCIDATA{LaTeXparent=0,0,main.tex}
+
+\chapter{Citações e referências}
+
+De modo geral é necessário fazer referência a trabalhos anteriores
+que serviram de base para o desenvolvimento de seu trabalho. As
+citações e a apresentação das referências no final do
+documento deve seguir o padrão ABNT que pode ser implementado com o pacote
+
+\texttt{abntex2cite}.
+
+\noindent A lista dos trabalhos que são referenciados neste
+exemplo é armazenada no arquivo \newline\texttt{src/bib/main.bib}.
+
+\section{Referenciando}
+
+Veja os exemplos: O programa \TeX {}\ foi idealizado e implementado
+inicialmente na decada de 70 \cite{knuth:tex}. \LaTeX {}\ \cite{lamport:latex}
+é uma das várias extensões do \TeX \ \cite{knuth:tex}. Há
+várias implementações de \LaTeX {}\ \cite{lamport:latex} para PCs
+\cite{furuta:pctex}.
+
+\section{BibTeX}
+
+Lembre-se de executar o BibTeX\ \cite{patashnik:bibtex} e, em seguida, executar
+o \LaTeX \ \cite{lamport:latex} duas vezes consecutivas, sempre que novas
+citações forem incluídas no texto.
+
+\section{Referências}
+ \lipsum[1-3]
