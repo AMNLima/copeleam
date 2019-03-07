@@ -5,6 +5,7 @@
 \usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}%
 \usepackage{nomencl}
 %
+\newcounter{mypagenr}
 \newcommand{\simbolo}{\nomenclature}
 \newcommand{\abreviatura}{\nomenclature}
 \newcommand{\bibnameam}{Refer\^{e}ncias bibliogr\'{a}ficas}
@@ -854,9 +855,7 @@
     }
 %
 \newcommand{\Introducao}{%
-      \newpage
-      \pagestyle{headings}
-      \pagenumbering{arabic}
+      \newpage\pagestyle{headings}\pagenumbering{arabic}
       \@restonecolfalse
       \IfFileExists{\@currdir src/etc/introduc.tex}{
       \chapter{Introdu\c{c}\~{a}o}
@@ -866,9 +865,10 @@
     }
 %
 \newcommand{\Conclusao}{%
-      \newpage
-      \pagestyle{headings}
+      \newpage\pagestyle{headings}  
+      \setcounter{mypagenr}{\value{page}}
       \pagenumbering{arabic}
+       \setcounter{page}{\value{mypagenr}}%
       \@restonecolfalse
       \IfFileExists{\@currdir src/etc/conclusa.tex}{
       \chapter{Conclus\~{a}o}
