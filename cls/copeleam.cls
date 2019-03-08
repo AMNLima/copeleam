@@ -5,12 +5,12 @@
 \usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}%
 \usepackage{nomencl}
 %
-\newcounter{mypagenr}
+\newcounter{mypageno}
 \newcommand{\simbolo}{\nomenclature}
 \newcommand{\abreviatura}{\nomenclature}
 \newcommand{\bibnameam}{Refer\^{e}ncias bibliogr\'{a}ficas}
 \newcommand{\contentsnameam}{Sum\'{a}rio}
-\renewcommand{\nomname}{Lista de s\'{i}mbolos e abreviaturas}
+\renewcommand{\nomname}{Lista de s\'{\i}mbolos e abreviaturas}
 \renewcommand{\pagedeclaration}[1]{\hfill\nobreakspace#1}
 %
 \makenomenclature
@@ -364,7 +364,7 @@
    \Orientadores \par
   \@thanks
   \vfil\null
-   Campina Grande, Para\'{i}ba, Brasil \par
+   Campina Grande, Para\'{\i}ba, Brasil \par
    \copyright\@Autor, \@Data \par
   \end{center}\par
 \if@msc
@@ -384,7 +384,7 @@
     \vskip 3em%
     \Membros \par
     \vfil\null
-   Campina Grande, Para\'{i}ba, Brasil, \@Data \par
+   Campina Grande, Para\'{\i}ba, Brasil, \@Data \par
   \end{center} \par
 \fi
 \if@dsc
@@ -404,7 +404,7 @@
     \vskip 3em%
     \Membros \par
     \vfil\null
-   Campina Grande, Para\'{i}ba, Brasil, \@Data \par
+   Campina Grande, Para\'{\i}ba, Brasil, \@Data \par
   \end{center} \par
 \fi
   \end{titlepage}%
@@ -866,9 +866,9 @@
 %
 \newcommand{\Conclusao}{%
       \newpage\pagestyle{headings}  
-      \setcounter{mypagenr}{\value{page}}
+      \setcounter{mypageno}{\value{page}}
       \pagenumbering{arabic}
-       \setcounter{page}{\value{mypagenr}}%
+       \setcounter{page}{\value{mypageno}}%
       \@restonecolfalse
       \IfFileExists{\@currdir src/etc/conclusa.tex}{
       \chapter{Conclus\~{a}o}

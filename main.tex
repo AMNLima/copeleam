@@ -29,6 +29,13 @@
 \usepackage[brazil,english]{babel}
 \usepackage{notoccite}
 %
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, 
+    linktoc=all,
+    linkcolor=blue,  
+}
+%
 \usepackage[num,abnt-etal-list=0,bibjustif,abnt-full-initials=yes]{abntex2cite}
 \citebrackets[]
 %
@@ -54,6 +61,7 @@
 \input{inc/\doc.tex}
 \pagenumbering{arabic}
 \setcounter{page}{0}
+%
 \Introducao
 %
 \input{src/cap2/cap2.tex}
