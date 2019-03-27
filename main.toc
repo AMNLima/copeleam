@@ -1,0 +1,25 @@
+\babel@toc {english}{}
+\babel@toc {brazil}{}
+\babel@toc {english}{}
+\babel@toc {brazil}{}
+\contentsline {chapter}{\numberline {1}Introdu\c {c}\~{a}o}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}M\IeC {\'e}todo cient\IeC {\'\i }fico}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Mensagem introdut\IeC {\'o}ria}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Seguindo o exemplo}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}S\IeC {\'\i }mbolos e abreviaturas}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Incluindo arquivos}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Recomenda\IeC {\c c}\IeC {\~o}es de reda\IeC {\c c}\IeC {\~a}o}{7}{section.2.3}
+\contentsline {chapter}{\numberline {3}Cita\IeC {\c c}\IeC {\~o}es e refer\IeC {\^e}ncias}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Referenciando}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}BibTeX}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Refer\IeC {\^e}ncias}{10}{section.3.3}
+\contentsline {chapter}{\numberline {4}Figuras e tabelas}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Formato EPS}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Formato PNG}{14}{section.4.2}
+\contentsline {section}{\numberline {4.3}Tabelas}{19}{section.4.3}
+\contentsline {chapter}{\numberline {5}Pictures}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}\LaTeX and T\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m {}}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}TikZ}{24}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclus\~{a}o}{28}{chapter.6}
+\contentsline {chapter}{\numberline {A}Informa\IeC {\c c}\IeC {\~o}es adicionais}{30}{appendix.A}
+\contentsline {chapter}{\numberline {}Refer\^{e}ncias bibliogr\'{a}ficas}{31}{appendix.B}

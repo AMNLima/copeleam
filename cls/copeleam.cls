@@ -325,7 +325,7 @@
    \fi
    \if@prm
    \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradu\c{c}\~{a}o em Engenharia
+   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
    El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
    parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
    \Grau . \ \begin{center} \'{A}rea de
@@ -334,7 +334,7 @@
    \fi
    \if@dsc
    \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradu\c{c}\~{a}o em Engenharia
+   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
    El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
    parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
    \Grau . \ \begin{center} \'{A}rea de
@@ -343,7 +343,7 @@
    \fi
    \if@prd
    \manuscrito\ de \grau\ submetido \'{a} Coordenadoria do
-   Programa de P\'{o}s-Gradu\c{c}\~{a}o em Engenharia
+   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
    El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
    parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
    \Grau . \ \begin{center} \'{A}rea de
@@ -352,7 +352,7 @@
    \fi
    \if@qlf
    \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradu\c{c}\~{a}o em Engenharia
+   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
    El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
    parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
    \Grau . \ \begin{center} \'{A}rea de
