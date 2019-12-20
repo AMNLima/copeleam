@@ -8,7 +8,7 @@
 %\newcommand{\doc}{qlf}
 %% Para gerar lista a Lista de Simbolos e Abreviaturas
 \immediate\write18{makeindex \jobname.nlo -s nomencl.ist -o \jobname.nls}
-
+%%
 \documentclass[\doc]{cls/copeleam}
 %
 \usepackage[utf8]{inputenc}
@@ -51,7 +51,7 @@
 %
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-%
+%%
 \begin{document}
 \selectlanguage{brazil}
 \Titulo{Ajudando na edição de textos científicos}
@@ -61,19 +61,19 @@
 % Escolha um
 %\Area{Processamento da Energia}
 \Area{Processamento da Informação}
-%
+%%
 \PaginadeRosto
 \input{inc/\doc.tex}
 \pagenumbering{arabic}
 \setcounter{page}{0}
-%
+%%
 \Introducao
-%
+%%
 \input{src/cap2/cap2.tex}
 \input{src/cap3/cap3.tex}
 \input{src/cap4/cap4.tex}
 \input{src/cap5/cap5.tex}
-%
+%%
 \Conclusao
 %%
 \appendix
