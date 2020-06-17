@@ -7,8 +7,10 @@ Você também pode incluir gráficos nos formatos \texttt{EPS} ou \texttt{PNG}. 
 A Figura~\ref{dinosaur} representa sua postura atual frente as mudanças.
 Você está ciente do efeito \texttt{orloff} mas não quer pagar para
 ver. \begin{figure}[htbp]
-\centering \includegraphics[width=80mm]{dinossau} \caption{Voce antes de usar o LaTeX!}%
-\label{dinosaur}%
+\caption{Voce antes de usar o LaTeX!}%
+\centering \includegraphics[width=80mm]{dinossau}
+\caption*{Fonte: Elaborada pelo autor.}
+ \label{dinosaur}%
 \end{figure}
 
 Já a Figura~\ref{toucan} ilustra como você se sente depois de refletir
@@ -16,8 +18,9 @@ um pouco. As pressões são muitas mas não dá para fechar
 questão! Note que nao é tao estranho se se sentir assim, vários
 personagens ilustres do cenário nacional também se sentem deste modo.
 \begin{figure}[htbp]
-\centering \includegraphics[width=80mm]{tucanobr} \caption{Voce prestes a usar o LaTeX}%
-\label{toucan}%
+\caption{Voce prestes a usar o LaTeX}
+\centering \includegraphics[width=80mm]{tucanobr} \label{toucan}%
+\caption*{Fonte: Elaborada pelo autor.}
 \end{figure}
 
 \section{Formato EPS}
@@ -56,6 +59,7 @@ tem, todas, suas vantagens e desvantagens. A título de exemplo,
 apresenta-se na Tabela~\ref{comparando} uma comparação entre algumas
 ferramentas de edição de textos.
 \begin{table}[ptb]
+\caption{Comparando ferramentas de edição de textos}%
 \centering
 \begin{tabular}
 [c]{|c|c|c|}\hline
@@ -65,8 +69,8 @@ Troff & \multicolumn{1}{|c|}{10.0} & 1.0\\\hline
 \TeX  & \multicolumn{1}{|c|}{7.0} & 10.0\\\hline
 Scientific Word/LaTeX & \multicolumn{1}{|c|}{8.0} & 10.0\\\hline
 \end{tabular}
-\caption{Comparando ferramentas de edição de textos}%
 \label{comparando}%
+\caption*{Fonte: Elaborada pelo autor.}
 \end{table}
 %
 \begin{table}[h]
@@ -82,6 +86,7 @@ Posi{\c c}{\~a}o & Pa{\'i}s & IDH \\ % Note a separação de col. e a quebra de 
 5 & Alemanha       & .920            % não é preciso quebrar a última linha
 
 \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{table}
 %
 \begin{table}[htbp]
@@ -93,6 +98,7 @@ Posi{\c c}{\~a}o & Pa{\'i}s & IDH \\ % Note a separação de col. e a quebra de 
     \hline
     a & b & c\\
   \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{table}
 %
 \begin{table}[htbp]
@@ -104,6 +110,7 @@ Posi{\c c}{\~a}o & Pa{\'i}s & IDH \\ % Note a separação de col. e a quebra de 
     \hline
     d & e & f\\
   \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{table}
 %
 \begin{table}[htbp]
@@ -117,5 +124,6 @@ Posi{\c c}{\~a}o & Pa{\'i}s & IDH \\ % Note a separação de col. e a quebra de 
     d & e & f\\
     a & b & c\\
   \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{table}
 %

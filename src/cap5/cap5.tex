@@ -10,6 +10,7 @@ picture symbols. These include vector, line, oval, and others. For
 more information you should refer to the \LaTeX {}\ manual
 \cite{lamport:latex}.
 \begin{figure}[htbp]
+\caption{Simple picture created with \LaTeX\ .}
 \centering  
 \begin{picture}(100,100)(0,0)
 \put(60,70){\vector(1,0){15}}
@@ -24,7 +25,7 @@ more information you should refer to the \LaTeX {}\ manual
 \put(20,22){\circle{20}}
 \put(60,22){\oval(40,20)[r]}
 \end{picture}
-\caption{Simple picture created with \LaTeX\ .}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{figure}
 
 The above picture was made with the following \LaTeX {}\ code:
@@ -49,6 +50,7 @@ The above picture was made with the following \LaTeX {}\ code:
 \end{verbatim}
 %
 \begin{figure}[htbp]
+\caption{Simple vectors created with \LaTeX\ .}
 \centering  
 \setlength{\unitlength}{1cm} 
 \begin{picture}(5,5)(0,0)
@@ -57,10 +59,11 @@ The above picture was made with the following \LaTeX {}\ code:
 \put(2,3){\vector(2,3){1}}	
 \put(2.2,3.2){$a_1$}	
 \end{picture} 
-\caption{Simple vectors created with \LaTeX\ .}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{figure}
 %
 \begin{figure}[htbp]
+\caption{Simple arc picture created with \LaTeX\ .}
 \centering  
 \setlength{\unitlength}{1pt} 
 \begin{picture}(200,200)(0,0) 
@@ -77,7 +80,7 @@ The above picture was made with the following \LaTeX {}\ code:
 \put(50,30){\line(-1,0){40}} 
 \put(50,31){\makebox(0,0)[b]{C}} 
 \end{picture} 
-\caption{Simple arc picture created with \LaTeX\ .}
+\caption*{Fonte: Elaborada pelo autor.}
 \end{figure}
 %
 
@@ -93,20 +96,21 @@ There are other and more powerful tools to create graphic elements in LATEX. Tik
 \tikzstyle{output} = [coordinate]
 \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 \begin{figure}[!ht]
+\caption{Diagrama de blocos de um sistema de controle em malha-fechada.}
 \centering
 % The block diagram code is probably more verbose than necessary
 \begin{tikzpicture}[auto, node distance=3cm,>=latex']
     % We start by placing the blocks
     \node [input, name=input] {};
     \node [sum, right of=input] (sum) {};
-    \node [block, right of=sum] (controller) {Controller};
-    \node [block, right of=controller, pin={[pinstyle]above:Disturbances},
-            node distance=4cm] (system) {System};
+    \node [block, right of=sum] (controller) {Controlador};
+    \node [block, right of=controller, pin={[pinstyle]above:Perturba\c{c}\~{o}es},
+            node distance=4cm] (system) {Sistema};
     % We draw an edge between the controller and system block to 
     % calculate the coordinate u. We need it to place the measurement block. 
     \draw [->] (controller) -- node[name=u] {$u$} (system);
     \node [output, right of=system] (output) {};
-    \node [block, below of=u] (measurements) {Measurements};
+    \node [block, below of=u] (measurements) {Sensor};
     % Once the nodes are placed, connecting them is easy. 
     \draw [draw,->] (input) -- node {$r$} (sum);
     \draw [->] (sum) -- node {$e$} (controller);
@@ -115,7 +119,7 @@ There are other and more powerful tools to create graphic elements in LATEX. Tik
     \draw [->] (measurements) -| node[pos=0.99] {$-$} 
         node [near end] {$y_m$} (sum);
 \end{tikzpicture}
-\caption{Block diagram of a closed-loop control system.}
+\caption*{Fonte: Adaptada do exemplo {\it Control system principles}  do \url{http://www.texample.net/}.}
 \end{figure}
 The above picture was made with the following TikZ code:
 
@@ -127,20 +131,21 @@ The above picture was made with the following TikZ code:
 \tikzstyle{output} = [coordinate]
 \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 \begin{figure}[!ht]
+\caption{Diagrama de blocos de um sistema de controle em malha-fechada.}
 \centering
 % The block diagram code is probably more verbose than necessary
 \begin{tikzpicture}[auto, node distance=3cm,>=latex']
     % We start by placing the blocks
     \node [input, name=input] {};
     \node [sum, right of=input] (sum) {};
-    \node [block, right of=sum] (controller) {Controller};
-    \node [block, right of=controller, pin={[pinstyle]above:Disturbances},
-            node distance=4cm] (system) {System};
+    \node [block, right of=sum] (controller) {Controlador};
+    \node [block, right of=controller, pin={[pinstyle]above:Perturba\c{c}\~{o}es},
+            node distance=4cm] (system) {Sistema};
     % We draw an edge between the controller and system block to 
     % calculate the coordinate u. We need it to place the measurement block. 
     \draw [->] (controller) -- node[name=u] {$u$} (system);
     \node [output, right of=system] (output) {};
-    \node [block, below of=u] (measurements) {Measurements};
+    \node [block, below of=u] (measurements) {Sensor};
     % Once the nodes are placed, connecting them is easy. 
     \draw [draw,->] (input) -- node {$r$} (sum);
     \draw [->] (sum) -- node {$e$} (controller);
@@ -149,6 +154,6 @@ The above picture was made with the following TikZ code:
     \draw [->] (measurements) -| node[pos=0.99] {$-$} 
         node [near end] {$y_m$} (sum);
 \end{tikzpicture}
-\caption{Block diagram of a closed-loop control system.}
+\caption*{Fonte: Adaptada do exemplo {\it Control system principles}  do \url{http://www.texample.net/}.}
 \end{figure}
 \end{verbatim}
