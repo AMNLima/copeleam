@@ -26,20 +26,47 @@ e.g., \texttt{notepad}, \texttt{textedit}, \texttt{qe}, \texttt{vi} ou \texttt{e
 
 Entretanto, se você preferir usar os arquivos disponibilizados como exemplos isto não será necessário.
 
-\section{Símbolos e abreviaturas}
+\section{Abreviaturas, símbolos, siglas e acrónimos}
 
 Os trabalhos de dissertação de mestrado e tese de doutorado contém
 siglas, fórrmulas e equaões, cujos significados devem ser
-inequívocos. A definição das siglas, dos parâmetros e
-variáveis que voce usa ao longo do seu trabalho deve ser apresentada logo
-no início do documento. Defina seus símbolos e abreviaturas e
+inequívocos. A definição das abreviaturas, siglas, acrônimo, e os símbolos dos parâmetros e variáveis que voce usa ao longo do seu trabalho deve ser apresentada logo
+no início do documento. Defina suas abreviaturas, símbolos, siglas e acrônimo e
 insira, onde julgar apropriado, os comandos
 
-\noindent\verb|\simbolo{símbolo}{definição\nomrefpage}|,
+\noindent\verb|\abreviatura{minha_abreviatura}{definição\nomrefpage}|,
 
-\noindent\verb|\abreviatura{abreviatura}{definição\nomrefpage}|,
+\noindent\verb|\simbolo{meu_simbolo}{definição\nomrefpage}|,
 
-\noindent adaptados do pacote \texttt{nomencl}. Se você utilizar estes comandos a sua \texttt{Lista de símbolos e abreviaturas} será gerada automaticamente; veja, o exemplo em seguida, no qual há a definição de símbolos para vetor de campo elétrico, vetor de campo magnético, velocidade da luz, permissividade elétrica do espaço livre e permeabilidade magnética do espaço livre, que vão ser incluídos na Lista de Símbolos e abreviaturas.
+\noindent\verb|\sigla{minha_sigla}{definição\nomrefpage}|,
+
+\noindent\verb|\acronimo{meu_acronimo}{definição\nomrefpage}|,
+
+\noindent adaptados do pacote \texttt{nomencl}. Se você utilizar estes comandos a sua \texttt{Lista de abreviaturas, símbolos, siglas e acrônimos} será gerada automaticamente; veja, o exemplo em seguida, no qual há a definição de símbolos para vetor de campo elétrico, vetor de campo magnético, velocidade da luz, permissividade elétrica do espaço livre e permeabilidade magnética do espaço livre, que vão ser incluídos na Lista de abreviaturas, símbolos, siglas e acrônimos.
+
+As siglas devem ser precedidas pelo nome por extenso. Ex: Cooperação Latino-Americana de Redes Avançadas (Clara); América Latina Conectada com a Europa (Alice), Americas Path (Ampath); pontos de presença (PoPs), Network Time Protocol (NTP).
+
+Exceções:
+\begin{itemize}
+\item Protocolo PIM-SM (Protocol Independent Multicast- Sparse Mode)
+\item IPv6 (Internet Protocol version 6)
+\item IPng (IP Next Generation)
+\item UTC (Universal Time Coordinated)
+\item GPS (Global Positioning System)
+\end{itemize}
+
+Siglas consagradas pelo uso corrente não precisam de explicação. Ex: Mbps
+
+O significado das siglas de palavras estrangeiras deve ser dado em português, exceto as siglas que não tiverem a tradução para o português reconhecida. Ex: RP (Rendezvous point); PIM-SM (Protocol Independent Multicast – Sparse Mode).
+
+Use maiúsculas nos seguintes casos:
+
+\begin{itemize}
+\item Siglas - ABNT, RNP , UFRJ, PUC, MCT, CGEE (Exceções: PoP, QoS, CNPq, CPqD, UnB)
+\item Acrônimos (siglas que formam palavras) com até três letras - ONU, RAU, MEC. A partir de quatro letras, use minúsculas - Banerj, Unicef.
+Abreviaturas\footnote[1]{Sobre abreviaturas, ver também ALMEIDA, Napoleão Mendes de. Gramática Metódica da Língua Portuguesa. São Paulo: Saraiva, 1999. § 146.}
+ - use minúsculas para os casos de unidades de medidas. Ex: Gbps, Mbps, Hz, km.
+\end{itemize}
 
 As equações de Maxwell permitem descrever de forma concisa e elegante
 os fundamentos da eletricidade e magnetismo. A formulação integral das
@@ -70,9 +97,8 @@ _{0}i+\frac{1}{c^{2}}\frac{\partial}{\partial t}\oint\overrightarrow
 \simbolo{$p_{i}$}{$i$-ésimo pólo da função de transferência $H\left(s\right)$\nomrefpage}%
 \simbolo{$z_{j}$}{$j$-ésimo zero da função de transferência $H\left(s\right)$\nomrefpage}%
 
-\footnotetext{O arquivo \texttt{introduc.tex}, se existir no diret\'{o}rio \texttt{src/etc/}, será incluído automaticamente pelo \LaTeX \ no momento da compilação, através do comando \textbackslash\texttt{Introducao}. Você pode, se preferir, preparar este arquivo na etapa final da redação do seu documento.}
 
-Este é o primeiro capítulo depois da introdução e será numerado, no documento impresso, como Capítulo~\ref{cap2} \cite{taylor}; a introdução é sempre o primeiro capítulo. É aqui onde começa, efetivamente, o texto relativo ao desenvolvimento de seu trabalho \cite{etex}. Você pode armazenar este texto num arquivo único ou dividi-lo em
+Este é o primeiro capítulo depois da introdução\footnote[2]{O arquivo \texttt{introduc.tex}, se existir no diret\'{o}rio \texttt{src/etc/}, será incluído automaticamente pelo \LaTeX \ no momento da compilação, através do comando \textbackslash\texttt{Introducao}. Você pode, se preferir, preparar este arquivo na etapa final da redação do seu documento.} e será numerado, no documento impresso, como Capítulo~\ref{cap2} \cite{taylor}; a introdução é sempre o primeiro capítulo. É aqui onde começa, efetivamente, o texto relativo ao desenvolvimento de seu trabalho \cite{etex}. Você pode armazenar este texto num arquivo único ou dividi-lo em
 vários arquivos separados. O texto deste roteiro, por exemplo,
 está dividido da seguinte maneira:
 

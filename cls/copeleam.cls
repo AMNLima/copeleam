@@ -6,11 +6,13 @@
 \usepackage{nomencl}
 %
 \newcounter{mypageno}
-\newcommand{\simbolo}{\nomenclature}
 \newcommand{\abreviatura}{\nomenclature}
+\newcommand{\acronimo}{\nomenclature}
+\newcommand{\sigla}{\nomenclature}
+\newcommand{\simbolo}{\nomenclature}
 \newcommand{\bibnameam}{Refer\^{e}ncias bibliogr\'{a}ficas}
 \newcommand{\contentsnameam}{Sum\'{a}rio}
-\renewcommand{\nomname}{Lista de s\'{\i}mbolos e abreviaturas}
+\renewcommand{\nomname}{Lista de abreviaturas, símbolos, siglas e acrônimos}
 \renewcommand{\pagedeclaration}[1]{\hfill\nobreakspace#1}
 %
 \makenomenclature
@@ -934,7 +936,7 @@
   \kern-3\p@
   \hrule width .4\columnwidth
   \kern 2.6\p@}
-\@addtoreset{footnote}{chapter}
+\@addtoreset{footnote}{section}
 \long\def\@makefntext#1{%
     \parindent 1em%
     \noindent
