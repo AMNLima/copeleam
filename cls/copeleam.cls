@@ -4,12 +4,19 @@
 \ProvidesClass{cls/copeleam}[2005/04/02 v2.0 Non Standard LaTeX document class]
 \usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}%
 \usepackage{nomencl}
+\usepackage{ifthen}
 %
+\renewcommand{\nomgroup}[1]{%
+\ifthenelse{\equal{#1}{A}}{\item[\Large\bfseries Abreviaturas]}{
+\ifthenelse{\equal{#1}{B}}{\item[\Large\bfseries Símbolos      ]}{
+\ifthenelse{\equal{#1}{C}}{\item[\Large\bfseries Siglas           ]}{
+\ifthenelse{\equal{#1}{D}}{\item[\Large\bfseries Acrônimos   ]}{}}}}
+}
 \newcounter{mypageno}
-\newcommand{\abreviatura}{\nomenclature}
-\newcommand{\acronimo}{\nomenclature}
-\newcommand{\sigla}{\nomenclature}
-\newcommand{\simbolo}{\nomenclature}
+\newcommand{\abreviatura}[2]{\nomenclature[A]{#1}{#2}}
+\newcommand{\simbolo}[2]{\nomenclature[B]{#1}{#2}}
+\newcommand{\sigla}[2]{\nomenclature[C]{#1}{#2}}
+\newcommand{\acronimo}[2]{\nomenclature[D]{#1}{#2}}
 \newcommand{\bibnameam}{Refer\^{e}ncias bibliogr\'{a}ficas}
 \newcommand{\contentsnameam}{Sum\'{a}rio}
 \renewcommand{\nomname}{Lista de abreviaturas, símbolos, siglas e acrônimos}

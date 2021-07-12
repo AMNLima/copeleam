@@ -7,7 +7,7 @@
 %\newcommand{\doc}{prd}
 %\newcommand{\doc}{qlf}
 %% Para gerar lista a Lista de abreviaturas, símbolos, siglas e acrônimos
-\immediate\write18{makeindex \jobname.nlo -s nomencl.ist -o \jobname.nls}
+\immediate\write18{makeindex \jobname.nlo -s nomencl.ist -t \jobname.nlg -o \jobname.nls}
 %%
 \documentclass[\doc]{cls/copeleam}
 %
