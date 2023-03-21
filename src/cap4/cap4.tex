@@ -1,0 +1,129 @@
+%TCIDATA{LaTeXparent=0,0,main.tex}
+
+\chapter{Figuras e tabelas}
+
+Você também pode incluir gráficos nos formatos \texttt{EPS} ou \texttt{PNG}. A escolha por um destes formatos é feita no preambulo do arquivo \texttt{main.tex}. 
+
+A Figura~\ref{dinosaur} representa sua postura atual frente as mudanças.
+Você está ciente do efeito \texttt{orloff} mas não quer pagar para
+ver. \begin{figure}[htbp]
+\caption{Voce antes de usar o LaTeX!}%
+\centering \includegraphics[width=80mm]{dinossau}
+\caption*{Fonte: Elaborada pelo autor.}
+ \label{dinosaur}%
+\end{figure}
+
+Já a Figura~\ref{toucan} ilustra como você se sente depois de refletir
+um pouco. As pressões são muitas mas não dá para fechar
+questão! Note que nao é tao estranho se se sentir assim, vários
+personagens ilustres do cenário nacional também se sentem deste modo.
+\begin{figure}[htbp]
+\caption{Voce prestes a usar o LaTeX}
+\centering \includegraphics[width=80mm]{tucanobr} \label{toucan}%
+\caption*{Fonte: Elaborada pelo autor.}
+\end{figure}
+
+\section{Formato EPS}
+
+Para editar as suas figuras sugere-se a utilização de qualquer
+programa gráfico que disponibilize um filtro para Encapsulated PostScript
+\cite{Doron92e}. Uma vez que sua figura estiver pronta (observe cuidadosamente as dimensões), exporte-a como \texttt{EPS without TIFF Preview}. Lembre de alterar alterar o preambulo, de modo que as opções sejam:
+
+\noindent\verb|\usepackage[dvips]{graphicx}|
+
+\noindent\verb|\graphicspath{{cls/},{src/eps/}}|
+
+\noindent\verb|\DeclareGraphicsExtensions{.eps}|\\
+Se você mantiver estas escolhas, armazene seus arquivos gráficos no diretório \texttt{src/eps/}.
+
+\section{Formato PNG}
+Para editar as suas figuras sugere-se a utilização de qualquer
+programa gráfico que disponibilize um filtro para Portable Network Graphics
+\cite{Christensson}. Lembre de alterar alterar o preambulo, de modo que as opções sejam:
+
+\noindent\verb|\usepackage[pdftex]{graphicx}|
+
+\noindent\verb|\graphicspath{{cls/},{src/png/}}|
+
+\noindent\verb|\DeclareGraphicsExtensions{.png}|\\
+Se você mantiver estas escolhas, armazene seus arquivos gráficos no diretório \texttt{src/png/}.
+
+\section{Tabelas}
+
+Eis algumas tabelas criadas com comandos do \LaTeX . Eventualmente alguma ou
+alguma delas pode lhe ser útil. Dê uma olhada e use-as como exemplos para
+construir as suas!
+
+As diversas ferramentas usadas para a preparacao de textos científicos
+tem, todas, suas vantagens e desvantagens. A título de exemplo,
+apresenta-se na Tabela~\ref{comparando} uma comparação entre algumas
+ferramentas de edição de textos.
+\begin{table}[ptb]
+\caption{Comparando ferramentas de edição de textos}%
+\centering
+\begin{tabular}
+[c]{|c|c|c|}\hline
+Ferramenta & Curva de aprendizado & Suporte\\\hline
+FrameMaker & \multicolumn{1}{|c|}{5.0} & 6.0\\\hline
+Troff & \multicolumn{1}{|c|}{10.0} & 1.0\\\hline
+\TeX  & \multicolumn{1}{|c|}{7.0} & 10.0\\\hline
+Scientific Word/LaTeX & \multicolumn{1}{|c|}{8.0} & 10.0\\\hline
+\end{tabular}
+\label{comparando}%
+\caption*{Fonte: Elaborada pelo autor.}
+\end{table}
+%
+\begin{table}[h]
+\centering
+\caption{Um nome qualquer}
+\begin{tabular}{r|lr}
+Posi{\c c}{\~a}o & Pa{\'i}s & IDH \\ % Note a separação de col. e a quebra de linhas
+\hline                               % para uma linha horizontal
+1 & Noruega        & .955 \\
+2 & Austr{\'a}lia  & .938 \\
+3 & EUA            & .937 \\
+4 & Holanda        & .921 \\
+5 & Alemanha       & .920            % não é preciso quebrar a última linha
+
+\end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
+\end{table}
+%
+\begin{table}[htbp]
+  \centering
+  \caption{Primeiro exemplo de tabela.}
+  \label{tab:table1}
+  \begin{tabular}{l|c||r}
+    1 & 2 & 3\\
+    \hline
+    a & b & c\\
+  \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
+\end{table}
+%
+\begin{table}[htbp]
+  \centering
+  \caption{Segundo exemplo de tabela.}
+  \label{tab:table2}
+  \begin{tabular}{l|c||r}
+    4 & 5 & 6\\
+    \hline
+    d & e & f\\
+  \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
+\end{table}
+%
+\begin{table}[htbp]
+  \centering
+  \caption{Terceiro exemplo de tabela.}
+  \label{tab:table3}
+  \begin{tabular}{l|c||r}
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    \hline
+    d & e & f\\
+    a & b & c\\
+  \end{tabular}
+\caption*{Fonte: Elaborada pelo autor.}
+\end{table}
+%

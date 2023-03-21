@@ -1,0 +1,225 @@
+%TCIDATA{LaTeXparent=0,0,main.tex}
+
+\chapter{Seguindo o exemplo\label{cap2}}
+
+Dissertações e teses, invariavelmente, iniciam pela
+apresentação do tema sobre o qual versam \cite{SP}. Esta
+apresentação também inclui a motivação, a
+contextualização do tema e a revisao bibliográfica. De modo geral, no final da introdução descreve-se a
+organização do trabalho.
+
+Elabore a introdução de seu trabalho, gere num
+arquivo chamado \texttt{introduc.tex} e armazene-o, obrigatoriamente, no diretório \texttt{src/etc/}; este arquivo será incluído automaticamente pelo comando \textbackslash\texttt{Introducao}. De forma semelhante, elabore a conclusão de seu trabalho, gere um arquivo chamado \texttt{conclusa.tex} e armazene-o, obrigatoriamente, no diretório \texttt{src/etc/}; este arquivo será incluído automaticamente pelo comando \textbackslash\texttt{Conclusao}. 
+
+Se voce edita estes arquivos separadamente, e.g., usando o \texttt{Scientific Word}, lembre-se que você deve eliminar, com ajuda de um editor \texttt{ASCII},
+e.g., \texttt{notepad}, \texttt{textedit}, \texttt{qe}, \texttt{vi} ou \texttt{edit}, todos os comandos
+\begin{verbatim}
+\documentclass[...]{...} ... \begin{document}
+\end{verbatim}
+\noindent do preâmbulo do documento e, também o comando
+\begin{verbatim}
+\end{document}
+\end{verbatim}
+
+Entretanto, se você preferir usar os arquivos disponibilizados como exemplos isto não será necessário.
+
+\section{Abreviaturas, símbolos, siglas e acrônimos}
+
+Os trabalhos de dissertação de mestrado e tese de doutorado contém
+siglas, fórrmulas e equaões, cujos significados devem ser
+inequívocos. A definição das abreviaturas, siglas, acrônimo, e os símbolos dos parâmetros e variáveis que voce usa ao longo do seu trabalho deve ser apresentada logo
+no início do documento. Defina suas abreviaturas, símbolos, siglas e acrônimos e
+insira, onde julgar apropriado, os comandos
+
+\noindent\verb|\abreviatura{minha_abreviatura:}{definição\nomrefpage}|,
+
+\noindent\verb|\simbolo{meu_simbolo:}{definição\nomrefpage}|,
+
+\noindent\verb|\sigla{minha_sigla:}{definição\nomrefpage}|,
+
+\noindent\verb|\acronimo{meu_acronimo:}{definição\nomrefpage}|,
+
+\noindent adaptados do pacote \texttt{nomencl}. Se você utilizar estes comandos a sua \texttt{Lista de abreviaturas, símbolos, siglas e acrônimos} será gerada automaticamente; veja, o exemplo em seguida, no qual há a definição de símbolos para vetor de campo elétrico, vetor de campo magnético, velocidade da luz, permissividade elétrica do espaço livre e permeabilidade magnética do espaço livre, que vão ser incluídos na Lista de abreviaturas, símbolos, siglas e acrônimos.
+
+Sigla é a representação abreviada de um nome composto, geralmente por meio de suas iniciais. As siglas com até três letras são grafadas em maiúsculas: SUS, PFL, DOU, PM, OAB, USP, PUC, MEC, CEP, MP, URH, ME. As siglas com mais de três letras são grafadas apenas com a inicial maiúscula, desde que possam ser pronunciadas como uma palavra. Assim: Ipesc, Celesc, Casan, Serasa, Engepasa, Unibanco, Univali, Unisul, Telesc, Embratur, Dort, Unesco, Incra, Fiesp, Bradesco, Besc, Anatel, Bacen, Bovespa, Cofins, Cosif, Dataprev, Dieese, Embratel, Infraero, Mercosul, Procon, Sebrae, Sesc, Senac, Senai, Udesc, Unicamp, Unicef, Ufir, Unimed. Se não puderem ser pronunciadas como uma palavra, as siglas com mais de três letras serão grafadas em maiúsculas: ABNT, BNDES, CNBB, IPTU, DNER, INSS, ADCT, ICMS, CNPJ, FGTS, ISBN, ISSN, UFSC. Para formar o plural de uma sigla, basta acrescentar um "s" minúsculo a ela. Nunca use apóstrofo (').
+
+Certo: Ufirs, CEPs, URHs, PMs, Dorts.
+
+Errado: Ufir's, UFIR'S, CEP's, CEP'S, URH's, URH'S, PM's, Dort's. 
+
+Ao ser mencionado pela primeira vez, o nome composto deve ser escrito por extenso, seguido da sigla entre parênteses ou separada por travessão:
+
+O Banco do Estado de Santa Catarina - Besc apelou...
+
+O Banco do Estado de Santa Catarina (Besc) apelou...
+
+Nas vezes seguintes em que o nome for citado, deve-se usar apenas a sigla:
+
+Irresignado, o Besc apresentou contestação... 
+
+A sigla de Sociedade Anônima é "S.A.", e não "S/A". 
+
+A sigla de "Microempresa" é "ME", sem ponto depois do "E".
+
+Exceções:
+\begin{itemize}
+\item Protocolo PIM-SM (Protocol Independent Multicast- Sparse Mode)
+\item IPv6 (Internet Protocol version 6)
+\item IPng (IP Next Generation)
+\item UTC (Universal Time Coordinated)
+\item GPS (Global Positioning System)
+\end{itemize}
+
+Siglas consagradas pelo uso corrente não precisam de explicação. Ex: Mbps. O significado das siglas de palavras estrangeiras deve ser dado em português, exceto as siglas que não tiverem a tradução para o português reconhecida. Ex: RP (Rendezvous point); PIM-SM (Protocol Independent Multicast – Sparse Mode).
+
+Use maiúsculas nos seguintes casos:
+
+\begin{itemize}
+\item Siglas - ABNT, RNP , UFRJ, PUC, MCT, CGEE (Exceções: PoP, QoS, CNPq, CPqD, UnB)
+\item Acrônimos (siglas que formam palavras) com até três letras - ONU, RAU, MEC. A partir de quatro letras, use minúsculas - Banerj, Unicef.
+Abreviaturas\footnote[1]{Sobre abreviaturas, ver também ALMEIDA, Napoleão Mendes de. Gramática Metódica da Língua Portuguesa. São Paulo: Saraiva, 1999. § 146.}
+ - use minúsculas para os casos de unidades de medidas. Ex: Gbps, Mbps, Hz, km.
+\end{itemize}
+
+\abreviatura{CAPES}{Coordenação de Aperfeiçoamento de Pessoal de N\'{i}vel Superior\nomrefpage}
+\abreviatura{CNPq}{Conselho Nacional de Desenvolvimento Científico e Tecnológico\nomrefpage}%
+\abreviatura{FINEP}{Financiadora de Estudos e Projetos\nomrefpage}%
+\abreviatura{BNDES}{Banco Nacional de Desenvolvimento Econômico e Social\nomrefpage}
+\abreviatura{FIESP}{Federação das Indústrias do Estado de São Paulo\nomrefpage}%
+%
+\simbolo{$\overrightarrow{\mathbf{E}}$}{Vetor de campo elétrico, Vm$^{-1}$\nomrefpage}%
+\simbolo{$i_{k}\left(t\right)$}{Valor instantaneo da corrente elétrica que flui no $k$-ésimo ramo do circuito, A\nomrefpage}%
+\simbolo{$v_{l}\left(t\right)$}{Valor instantaneo da tensão elétrica do $l$-ésimo nó, V\nomrefpage}%
+\simbolo{$\overrightarrow{\mathbf{B}}$}{Vetor de campo magnético, T\nomrefpage}%
+\simbolo{$c$}{Velocidade da luz, ms$^{-1}$\nomrefpage}%
+\simbolo{$\varepsilon_{0}$}{Permissividade elétrica do espaço livre, C$^{2}$N$^{-1}$m$^{-2}$\nomrefpage}%
+\simbolo{$\mu_{0}$}{Permeabilidade magnética do espaço livre, NA$^{-2}$\nomrefpage}
+%
+\sigla{ABNT}{Associação Brasileira de Normas Técnicas\nomrefpage}
+\sigla{RNP}{Rede Nacional de Ensino e Pesquisa\nomrefpage}
+\sigla{UFCG}{Universidade Federal de Campina Grande\nomrefpage}
+\sigla{UFPB}{Universidade Federal da Paraíba\nomrefpage}
+%
+\acronimo{ONU}{Organização das Nações Unidas\nomrefpage}
+\acronimo{MEC}{Ministério da Educação\nomrefpage}
+\acronimo{Unicef}{Fundo das Nações Unidas para a Infância\nomrefpage}
+
+As equações de Maxwell permitem descrever de forma concisa e elegante
+os fundamentos da eletricidade e magnetismo. A formulação integral das
+equações de Maxwell para o caso em que o meio não é polarizavél e não há ímãs é:%
+\begin{align}
+\oint\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}  &
+=\frac{q}{\varepsilon_{0}}\\
+\oint\overrightarrow{\mathbf{B}}\cdot d\overrightarrow{\mathbf{A}}  & =0\\
+\oint\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{s}}  &
+=-\frac{d\Phi_{\mathbf{B}}}{dt}\\
+\oint\overrightarrow{\mathbf{B}}\cdot d\overrightarrow{\mathbf{s}}  & =\mu
+_{0}i+\frac{1}{c^{2}}\frac{\partial}{\partial t}\oint\overrightarrow
+{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}
+\end{align}
+%
+
+
+
+Este é o primeiro capítulo depois da introdução\footnote[2]{O arquivo \texttt{introduc.tex}, se existir no diret\'{o}rio \texttt{src/etc/}, será incluído automaticamente pelo \LaTeX \ no momento da compilação, através do comando \textbackslash\texttt{Introducao}. Você pode, se preferir, preparar este arquivo na etapa final da redação do seu documento.} e será numerado, no documento impresso, como Capítulo~\ref{cap2} \cite{taylor}; a introdução é sempre o primeiro capítulo. É aqui onde começa, efetivamente, o texto relativo ao desenvolvimento de seu trabalho \cite{etex}. Você pode armazenar este texto num arquivo único ou dividi-lo em
+vários arquivos separados. O texto deste roteiro, por exemplo,
+está dividido da seguinte maneira:
+
+\noindent\texttt{src/etc/introduc.tex}, \texttt{src/cap2/cap2.tex},
+\texttt{src/cap3/cap3.tex}, \texttt{src/cap4/cap4.tex} e \texttt{src/etc/conclusa.tex}
+
+Estes arquivos são arquivos secundários associados ao arquivo
+principal \cite{AbTaRu:54}. Usando a terminologia do \texttt{Scientific Word},
+estes arquivos são subdocumentos de \texttt{main.tex}. O arquivo
+\begin{verbatim}
+src/cap2/cap2.tex
+\end{verbatim}
+refere-se ao documento que voce está editando
+\cite{IEEEexample:masterstype}.
+
+\section{Incluindo arquivos}
+
+Veja que no arquivo original, \texttt{main.tex}, as instruções de
+inclusão que referem-se aos seguintes arquivos secundários:
+
+\noindent\verb|\input{src/cap2/cap2.tex}|
+
+\noindent\verb|\input{src/cap3/cap3.tex}|
+
+\noindent\verb|\input{src/cap4/cap4.tex}|
+
+Se voce prefir mudar os nomes e incluir outros arquivos, voce deve
+corrigir as instruções respectivas no arquivo principal
+\cite{IEEEexample:phdurl}. Por exemplo, se voce criou os arquivos
+\texttt{src/cap5/cap5.tex} e \texttt{src/apendice/apendice.tex}. Voce deve incluir no arquivo principal as seguintes instruções:
+
+\noindent\verb|\input{src/cap5/cap5.tex}|
+
+\noindent\verb|\input{src/apendice/apendice.tex}|
+
+Lembre que estes arquivos são do tipo secundário e não devem ter o cabeçalho padrão do \LaTeX  e nem a instrução de fim de documento, ou sejam,
+\begin{verbatim}
+\documentclass ... \begin{document} ... \end{document}
+\end{verbatim}
+
+Este cabeçalho so é necessário no arquivo \texttt{main.tex}. Por outro
+lado, instruções do tipo
+\begin{verbatim}
+\chapter{nomedocapitulo} ... \section{nomedasecao}
+\end{verbatim}
+podem e devem ser usadas.
+
+Observe que não é necessário acrescentar no arquivo \texttt{main.tex}
+os comandos para incluir os arquivos: \texttt{src/etc/orientad.tex}, \texttt{src/etc/membrosb.tex},
+\texttt{src/etc/dedicato.tex}, \texttt{src/etc/agradece.tex}, \texttt{src/etc/resumopt.tex} e \texttt{src/etc/resumoen.tex}.
+
+Estes arquivos, devem ser, obrigatoriamente, armazenados no diretório \texttt{src/etc} e serão incluídos automaticamente no momento da compilação, como é feito no caso dos arquivos \texttt{src/etc/conclusa.tex}, \texttt{src/etc/introduc.tex}.
+
+\section{Recomendações de redação}
+Um trabalho científico pode e deve ser consultado por várias pessoas, inclusive de áreas do conhecimento diferentes daquela que você atua. Desse modo, deve-se adotar uma forma expositiva e o nível de clareza interna, fornecendo ao leitor todas as informações necessárias para a compreensão do texto, inclusive a definição dos termos empregados.
+
+Entre algumas sugestões para a estrutura interna do texto, pode-se citar:
+
+– Evitar períodos longos;
+
+– Abrir parágrafos para “arejar” o texto;
+
+– Repetir o sujeito da frase sempre que for necessário para que a compressão não seja prejudicada;
+
+– Eliminar o excesso de pronomes e orações subordinadas;
+
+– Suprimir as divagações, transformando-as em notas ou apêndices;
+
+– Concentrar-se na demonstração das hipóteses levantadas;
+
+– Verificar a facilidade de leitura do texto, solicitando que outras pessoas também o leiam;
+
+– Evitar o emprego de reticências e pontos de exclamação;
+
+– Usar figuras de linguagem apenas quando presumir que o leitor será capaz de compreendê-las;
+
+– Definir um termo técnico ao induzi-lo pela primeira vez no texto;
+
+– Ser coerente na identificação de autores e outras informações referentes às fontes documentais.
+
+Entre as expressões que devem ser evitadas nos textos acadêmicos, sugere-se substituir:
+
+\begin{tabular}{|L{7cm}|L{7cm}|}\hline
+Expressão  &	Opções\\\hline
+– a nível de, ao nível	& – em nível de, no nível\\\hline
+– face a, frente a	&– ante, diante de, em vista de\\\hline
+– onde (quando não exprime lugar)	& – em que, na qual, nas quais, no qual\\\hline
+– sob um ponto de vista	& – de um ponto de vista\\\hline
+– sob um prisma	& – por um prisma\\\hline
+– como sendo	& – suprimir a expressão\\\hline
+– em função de	& – em virtude de, por causa de, por,\\\hline
+– a partir de (sem valor temporal)	& – com base em, tomando-se por base\\\hline
+– através de (sem atravessar algo)	& – por meio de, segundo, por, mediante\\\hline
+– devido a	& – em razão de, em virtude de\\\hline
+– dito	& – citado, mencionado\\\hline
+– como um todo	& – total, integral, completo\\\hline
+– há anos atrás	& – há anos\\\hline
+– por cada	& – suprimir a cacofonia\\\hline
+– antes do estudo ser feito	& – antes de o estudo ser realizado\\\hline
+– pelo fato destes resultados apontarem o contrário	& – pelo fato de estes resultados apontarem o contrário.\\\hline
+\end{tabular}
