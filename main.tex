@@ -29,7 +29,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{caption}
-\usepackage[brazil,english]{babel}
+\usepackage[english,brazil]{babel}
 \usepackage{notoccite}
 %
 \usepackage{indentfirst} 
@@ -42,7 +42,7 @@
     citecolor=blue,  
 }
 %
-\usepackage[num,overcite,abnt-etal-list=default,bibjustif,abnt-full-initials=yes]{abntex2cite}
+\usepackage[num,overcite,abnt-etal-list=4,bibjustif,abnt-full-initials=yes]{abntex2cite}
 \citebrackets[]
 %
 \usepackage{tikz}
@@ -54,7 +54,7 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %%
 \begin{document}
-\selectlanguage{brazil}
+\selectlanguage{english}
 \Titulo{Ajudando na edição de textos científicos}
 \Autor{Kwisatz Haderach}
 \Data{\today}
@@ -80,6 +80,7 @@
 \appendix
 \input{src/apendice/apendice.tex}
 %%
+\bibliographystyle{cls/abntex2-cite-min}
 \bibliography{src/bib/main}
 %
 \end{document}

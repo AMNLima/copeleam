@@ -5,21 +5,24 @@
 \RequirePackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}%
 \RequirePackage{nomencl}
 \RequirePackage{ifthen}
+\usepackage{etoolbox}
 %
+
 \renewcommand{\nomgroup}[1]{%
-\ifthenelse{\equal{#1}{A}}{\item[\Large\bfseries Abreviaturas]}{
-\ifthenelse{\equal{#1}{B}}{\item[\Large\bfseries Símbolos      ]}{
-\ifthenelse{\equal{#1}{C}}{\item[\Large\bfseries Siglas           ]}{
-\ifthenelse{\equal{#1}{D}}{\item[\Large\bfseries Acrônimos   ]}{}}}}
+  \ifstrequal{#1}{A}{\item[\Large\textbf{Abbreviations}]}{%
+  \ifstrequal{#1}{B}{\vspace{.7cm}\item[\Large\textbf{Symbols}]}{%
+  \ifstrequal{#1}{C}{\vspace{.7cm}\item[\Large\textbf{Initialisms}]}{%
+  \ifstrequal{#1}{D}{\vspace{.7cm}\item[\Large\textbf{Acronyms}]}
+  {}}}}%
 }
 \newcounter{mypageno}
 \newcommand{\abreviatura}[2]{\nomenclature[A]{#1:}{#2}}
 \newcommand{\simbolo}[2]{\nomenclature[B]{#1:}{#2}}
 \newcommand{\sigla}[2]{\nomenclature[C]{#1:}{#2}}
 \newcommand{\acronimo}[2]{\nomenclature[D]{#1:}{#2}}
-\newcommand{\bibnameam}{Refer\^{e}ncias bibliogr\'{a}ficas}
-\newcommand{\contentsnameam}{Sum\'{a}rio}
-\renewcommand{\nomname}{Lista de abreviaturas, símbolos, siglas e acrônimos}
+\newcommand{\bibnameam}{References}
+\newcommand{\contentsnameam}{Summary}
+\renewcommand{\nomname}{List of Abbreviations, Symbols, Initialisms, and Acronyms}
 \renewcommand{\pagedeclaration}[1]{\hfill\nobreakspace#1}
 %
 \makenomenclature
@@ -310,90 +313,57 @@
 {\includegraphics[width=2cm]{ufcg}}
 \end{minipage}\hfill
 \begin{minipage}[t]{\textwidth-2cm}\centering
-{\large{Universidade Federal de Campina Grande}}\\
-{\large{Centro de Engenharia El\'{e}trica e Inform\'{a}tica}}\\
-{\large{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica}}
+{\large{Federal University of Campina Grande}}\\
+{\large{Center for Electrical Engineering and Informatics}}\\
+{\large{Graduate Program in Electrical Engineering}}
 \end{minipage}\vskip 4em%
   \begin{center}%
-    {\LARGE \@Titulo \par}%
+  \vskip 6em%
     {\LARGE
-    \vskip 2em%
       \begin{tabular}[t]{c}%
         \@Autor
       \end{tabular}\par}%
-    \vskip 2em%
-   \parbox[t]{122mm}{
-   \if@msc
-   \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
-   El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
-   parte dos requisitos necess\'{a}rios para a obten\c{c}\~{a}o do grau de
-   \Grau . \ \begin{center} \'{A}rea de
-   Concentra\c{c}\~{a}o: \@Area
-   \end{center}
-   \fi
-   \if@prm
-   \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
-   El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
-   parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
-   \Grau . \ \begin{center} \'{A}rea de
-   Concentra\c{c}\~{a}o: \@Area
-   \end{center}
-   \fi
-   \if@dsc
-   \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
-   El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
-   parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
-   \Grau . \ \begin{center} \'{A}rea de
-   Concentra\c{c}\~{a}o: \@Area
-   \end{center}
-   \fi
-   \if@prd
-   \manuscrito\ de \grau\ submetido \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
-   El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
-   parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
-   \Grau . \ \begin{center} \'{A}rea de
-   Concentra\c{c}\~{a}o: \@Area
-   \end{center}
-   \fi
-   \if@qlf
-   \manuscrito\ de \grau\ submetida \`{a} Coordenadoria do
-   Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia
-   El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como
-   parte dos requisitos necess\'{a}rios para obten\c{c}\~{a}o do grau de
-   \Grau . \ \begin{center} \'{A}rea de
-   Concentra\c{c}\~{a}o: \@Area
-   \end{center}
-   \fi
-   }
-   \vskip 2em%
-   \Orientadores \par
-  \@thanks
-  \vfil\null
-   Campina Grande, Para\'{\i}ba, Brasil \par
+    \vskip 4em%
+    {\LARGE \@Titulo \par}%
+   \vfill
+   Campina Grande, Para\'{\i}ba, Brazil \par
    \copyright\@Autor, \@Data \par
   \end{center}\par
 \if@msc
  \newpage
- \thispagestyle{plain}
+ \thispagestyle{empty}
   \begin{center}
-    {\LARGE \@Titulo \par}
-    \vskip 3em%
     {\LARGE
       \begin{tabular}[t]{c}
         \@Autor
       \end{tabular}\par}
     \vskip 3em%
-    {\sl \manuscrito\ de \grau\ apresentada em \@Data}
-    \vskip 3em%
+    {\LARGE \@Titulo \par}
+    \vskip 5em%
+    \hspace{.4\textwidth}\parbox[t]{90mm}{{\sl \grau 's  \manuscrito\ submitted to the Coordination of the Electrical Engineering Graduate Program of the Federal University of Campina Grande - Campina Grande Campus, corresponding to the specialisation line in \@Area, in partial fulfilment of the requirements for the degree of \Grau.}}
+    \vskip 5em%
     \Orientadores \par
+    \vfill
+   Campina Grande, Para\'{\i}ba, Brazil, \@Data \par
+  \end{center} \par
+ \newpage
+ \thispagestyle{empty}
+  \begin{center}
+    {\LARGE
+      \begin{tabular}[t]{c}
+        \@Autor
+      \end{tabular}\par}
     \vskip 3em%
+    {\LARGE \@Titulo \par}
+    \vskip 3em%
+    \hspace{.4\textwidth}\parbox[t]{90mm}{{\sl \grau 's  \manuscrito\ submitted to the Coordination of the Electrical Engineering Graduate Program of the Federal University of Campina Grande - Campina Grande Campus, corresponding to the specialisation line in \@Area, in partial fulfilment of the requirements for the degree of \Grau.}}
+    \vskip 3em%
+    {\sl Approved on 25th of July of 2022}
+    \vskip 4em%
+    \Orientadores \par
+    \vskip 4em%
     \Membros \par
     \vfil\null
-   Campina Grande, Para\'{\i}ba, Brasil, \@Data \par
   \end{center} \par
 \fi
 \if@dsc
@@ -413,7 +383,7 @@
     \vskip 3em%
     \Membros \par
     \vfil\null
-   Campina Grande, Para\'{\i}ba, Brasil, \@Data \par
+   Campina Grande, Para\'{\i}ba, Brazil, \@Data \par
   \end{center} \par
 \fi
   \end{titlepage}%
@@ -790,8 +760,8 @@
 \newcommand{\listoftables}{%
       %\newpage\pagestyle{headings}\pagenumbering{roman}
       \@restonecolfalse
-    \chapter*{\listtablename}
-      \@mkboth{\listtablename}{\listtablename}%
+    \chapter*{List of Tables}
+      \@mkboth{List of Tables}{List of Tables}%
     \@starttoc{lot}%
     \clearpage
     \if@restonecol\twocolumn\fi
@@ -800,8 +770,8 @@
 \newcommand{\listoffigures}{%
       %\newpage\pagestyle{headings}\pagenumbering{roman}
       \@restonecolfalse
-    \chapter*{\listfigurename}
-      \@mkboth{\listfigurename}{\listfigurename}%
+    \chapter*{List of Figures}
+      \@mkboth{List of Figures}{List of Figures}%
     \@starttoc{lof}%
     \clearpage
     \if@restonecol\twocolumn\fi
@@ -821,10 +791,10 @@
 \newcommand{\Dedicatoria}{%
       \IfFileExists{\@currdir src/etc/dedicato.tex}{
       \newpage
-      \setcounter{page}{2}
+      \setcounter{page}{3}
       \thispagestyle{plain}
       \null\vfil
-      \centerline{\LARGE\bfseries Dedicat\'{o}ria}
+      \centerline{\LARGE\bfseries Dedication}
       \par
       \medskip
       \noindent\input{src/etc/dedicato.tex}}{\typeout{MISSING FILE: src/etc/dedicato.tex}}
@@ -835,7 +805,7 @@
       \newpage
       \thispagestyle{plain}
       \null\vfil
-      \centerline{\LARGE\bfseries Agradecimentos}
+      \centerline{\LARGE\bfseries Thanks}
       \par
       \medskip
       \noindent\input{src/etc/agradece.tex}}{\typeout{MISSING FILE: src/etc/agradece.tex}}
@@ -865,10 +835,11 @@
 %
 \newcommand{\Introducao}{%
       \newpage\pagestyle{headings}\pagenumbering{arabic}
+      \setcounter{page}{15}
       \@restonecolfalse
       \IfFileExists{\@currdir src/etc/introduc.tex}{
-      \chapter{Introdu\c{c}\~{a}o}
-      \@mkboth{\chaptername\ \thechapter. Introdu\c{c}\~{a}o}{\chaptername\ \thechapter. Introdu\c{c}\~{a}o}
+      \chapter{Introduction}
+      \@mkboth{\chaptername\ \thechapter. Introduction}{\chaptername\ \thechapter. Introduction}
       \input{src/etc/introduc.tex}}{\typeout{MISSING FILE: src/etc/introduc.tex}}
     \if@restonecol\twocolumn\fi
     }
@@ -880,8 +851,8 @@
        \setcounter{page}{\value{mypageno}}%
       \@restonecolfalse
       \IfFileExists{\@currdir src/etc/conclusa.tex}{
-      \chapter{Conclus\~{a}o}
-      \@mkboth{\chaptername\ \thechapter. Conclus\~{a}o}{\chaptername\ \thechapter. Conclus\~{a}o}
+      \chapter{Conclusions \& future work}
+      \@mkboth{\chaptername\ \thechapter. Conclusions \& future work}{\chaptername\ \thechapter. Conclusions \& future work}
       \input{src/etc/conclusa.tex}}{\typeout{MISSING FILE: src/etc/conclusa.tex}}
     \if@restonecol\twocolumn\fi
     }
