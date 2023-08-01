@@ -9,11 +9,11 @@
 %
 
 \renewcommand{\nomgroup}[1]{%
-  \ifstrequal{#1}{A}{\item[\Large\textbf{Abbreviations}]}{%
-  \ifstrequal{#1}{B}{\vspace{.7cm}\item[\Large\textbf{Symbols}]}{%
-  \ifstrequal{#1}{C}{\vspace{.7cm}\item[\Large\textbf{Initialisms}]}{%
-  \ifstrequal{#1}{D}{\vspace{.7cm}\item[\Large\textbf{Acronyms}]}
-  {}}}}%
+\ifstrequal{#1}{A}{\item[\Large\textbf{Symbols}]}{%
+\ifstrequal{#1}{B}{\item[\Large\textbf{Abbreviations}]}{%
+% \ifstrequal{#1}{C}{\item[\Large\textbf{Initialisms}]}{%
+% \ifstrequal{#1}{D}{\item[\Large\textbf{Acronyms}]}
+{}}}%
 }
 \newcounter{mypageno}
 \newcommand{\abreviatura}[2]{\nomenclature[A]{#1:}{#2}}
@@ -21,8 +21,8 @@
 \newcommand{\sigla}[2]{\nomenclature[C]{#1:}{#2}}
 \newcommand{\acronimo}[2]{\nomenclature[D]{#1:}{#2}}
 \newcommand{\bibnameam}{References}
-\newcommand{\contentsnameam}{Summary}
-\renewcommand{\nomname}{List of Abbreviations, Symbols, Initialisms, and Acronyms}
+\newcommand{\contentsnameam}{Contents}
+\renewcommand{\nomname}{List of Symbols and Abbreviations}
 \renewcommand{\pagedeclaration}[1]{\hfill\nobreakspace#1}
 %
 \makenomenclature
@@ -311,11 +311,14 @@
 \noindent
 \begin{minipage}[t]{2cm}\centering\raisebox{\dimexpr\topskip-\height}%
 {\includegraphics[width=2cm]{ufcg}}
-\end{minipage}\hfill
-\begin{minipage}[t]{\textwidth-2cm}\centering
-{\large{Federal University of Campina Grande}}\\
-{\large{Center for Electrical Engineering and Informatics}}\\
-{\large{Graduate Program in Electrical Engineering}}
+\end{minipage}%\hfill
+\begin{minipage}[t]{\textwidth-4cm}\centering
+  {\large{Universidade Federal de Campina Grande}}\\
+  {\large{Centro de Engenharia El\'{e}trica e Inform\'{a}tica}}\\
+  {\large{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica}}
+\end{minipage}
+\begin{minipage}[t]{2cm}\centering\raisebox{\dimexpr\topskip-\height}%
+{\includegraphics[width=2cm]{ceei}}
 \end{minipage}\vskip 4em%
   \begin{center}%
   \vskip 6em%
@@ -329,7 +332,7 @@
    Campina Grande, Para\'{\i}ba, Brazil \par
    \copyright\@Autor, \@Data \par
   \end{center}\par
-\if@msc
+
  \newpage
  \thispagestyle{empty}
   \begin{center}
@@ -340,7 +343,13 @@
     \vskip 3em%
     {\LARGE \@Titulo \par}
     \vskip 5em%
-    \hspace{.4\textwidth}\parbox[t]{90mm}{{\sl \grau 's  \manuscrito\ submitted to the Coordination of the Electrical Engineering Graduate Program of the Federal University of Campina Grande - Campina Grande Campus, corresponding to the specialisation line in \@Area, in partial fulfilment of the requirements for the degree of \Grau.}}
+    \hspace{.4\textwidth}\parbox[t]{90mm}{{\sl \manuscrito\ de \grau\ 
+    \if@prd
+   submetido
+   \else
+   submetida
+   \fi
+    \`{a} Coordenadoria do Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como parte dos requisitos necess\'{a}rios para a obten\c{c}\~{a}o do grau de \Grau.}}
     \vskip 5em%
     \Orientadores \par
     \vfill
@@ -356,36 +365,22 @@
     \vskip 3em%
     {\LARGE \@Titulo \par}
     \vskip 3em%
-    \hspace{.4\textwidth}\parbox[t]{90mm}{{\sl \grau 's  \manuscrito\ submitted to the Coordination of the Electrical Engineering Graduate Program of the Federal University of Campina Grande - Campina Grande Campus, corresponding to the specialisation line in \@Area, in partial fulfilment of the requirements for the degree of \Grau.}}
-    \vskip 3em%
-    {\sl Approved on 25th of July of 2022}
-    \vskip 4em%
-    \Orientadores \par
-    \vskip 4em%
-    \Membros \par
-    \vfil\null
-  \end{center} \par
-\fi
-\if@dsc
- \newpage
- \thispagestyle{plain}
-  \begin{center}
-    {\LARGE \@Titulo \par}
-    \vskip 3em%
-    {\LARGE
-      \begin{tabular}[t]{c}
-        \@Autor
-      \end{tabular}\par}
+    \hspace{.4\textwidth}\parbox[t]{90mm}{{\sl \manuscrito\ de \grau\ 
+    \if@prd
+   submetido
+   \else
+   submetida
+   \fi
+    \`{a} Coordenadoria do Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica da Universidade Federal de Campina Grande - Campus de Campina Grande como parte dos requisitos necess\'{a}rios para a obten\c{c}\~{a}o do grau de \Grau.}}
     \vskip 3em%
     {\sl \manuscrito\ de \grau\ apresentada em \@Data}
-    \vskip 3em%
+    \vskip 4em%
     \Orientadores \par
-    \vskip 3em%
+    \vskip 4em%
     \Membros \par
     \vfil\null
-   Campina Grande, Para\'{\i}ba, Brazil, \@Data \par
   \end{center} \par
-\fi
+
   \end{titlepage}%
   \setcounter{footnote}{0}
   \let\thanks\relax\let\PaginadeRosto\relax
@@ -790,14 +785,21 @@
 %
 \newcommand{\Dedicatoria}{%
       \IfFileExists{\@currdir src/etc/dedicato.tex}{
-      \newpage
-      \setcounter{page}{3}
+      \setcounter{page}{2}
       \thispagestyle{plain}
       \null\vfil
-      \centerline{\LARGE\bfseries Dedication}
+      \begingroup
+      \let\clearpage\relax
+      \chapter*{}
+      \endgroup %\begingroup utilizado para relaxar a configuração de \clearpage, evitando que o compilador pule uma página para criar um novo capítulo, evitando deixar uma página em branco
       \par
       \medskip
-      \noindent\input{src/etc/dedicato.tex}}{\typeout{MISSING FILE: src/etc/dedicato.tex}}
+       \hfill
+   \parbox[t]{90mm}{
+   \input{src/etc/dedicato.tex}}
+   {\typeout{MISSING FILE: src/etc/dedicato.tex}}
+   \newpage
+   } 
     }
 %
 \newcommand{\Agradecimentos}{%
@@ -805,7 +807,7 @@
       \newpage
       \thispagestyle{plain}
       \null\vfil
-      \centerline{\LARGE\bfseries Thanks}
+      \centerline{\LARGE\bfseries Acknowledgements}
       \par
       \medskip
       \noindent\input{src/etc/agradece.tex}}{\typeout{MISSING FILE: src/etc/agradece.tex}}
