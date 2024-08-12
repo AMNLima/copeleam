@@ -311,11 +311,14 @@
 \noindent
 \begin{minipage}[t]{2cm}\centering\raisebox{\dimexpr\topskip-\height}%
 {\includegraphics[width=2cm]{ufcg}}
-\end{minipage}\hfill
-\begin{minipage}[t]{\textwidth-2cm}\centering
-{\large{Federal University of Campina Grande}}\\
-{\large{Center for Electrical Engineering and Informatics}}\\
-{\large{Graduate Program in Electrical Engineering}}
+\end{minipage}%\hfill
+\begin{minipage}[t]{\textwidth-4cm}\centering
+  {\large{Federal University of Campina Grande}}\\
+  {\large{Center for Electrical Engineering and Informatics}}\\
+  {\large{Graduate Program in Electrical Engineering}}
+\end{minipage}
+\begin{minipage}[t]{2cm}\centering\raisebox{\dimexpr\topskip-\height}%
+{\includegraphics[width=2cm]{ceei}}
 \end{minipage}\vskip 4em%
   \begin{center}%
   \vskip 6em%
@@ -794,10 +797,18 @@
       \setcounter{page}{3}
       \thispagestyle{plain}
       \null\vfil
-      \centerline{\LARGE\bfseries Dedication}
+      \begingroup
+      \let\clearpage\relax
+      \chapter*{}
+      \endgroup %\begingroup utilizado para relaxar a configuração de \clearpage, evitando que o compilador pule uma página para criar um novo capítulo, evitando deixar uma página em branco
       \par
       \medskip
-      \noindent\input{src/etc/dedicato.tex}}{\typeout{MISSING FILE: src/etc/dedicato.tex}}
+       \hfill
+   \parbox[t]{90mm}{
+   \input{src/etc/dedicato.tex}}
+   {\typeout{MISSING FILE: src/etc/dedicato.tex}}
+   \newpage
+   } 
     }
 %
 \newcommand{\Agradecimentos}{%
@@ -805,7 +816,7 @@
       \newpage
       \thispagestyle{plain}
       \null\vfil
-      \centerline{\LARGE\bfseries Thanks}
+      \centerline{\LARGE\bfseries Acknowledgements}
       \par
       \medskip
       \noindent\input{src/etc/agradece.tex}}{\typeout{MISSING FILE: src/etc/agradece.tex}}
