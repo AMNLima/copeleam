@@ -313,9 +313,9 @@
 {\includegraphics[width=2cm]{ufcg}}
 \end{minipage}%\hfill
 \begin{minipage}[t]{\textwidth-4cm}\centering
-  {\large{Universidade Federal de Campina Grande}}\\
-  {\large{Centro de Engenharia El\'{e}trica e Inform\'{a}tica}}\\
-  {\large{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica}}
+  {\large{Federal University of Campina Grande}}\\
+  {\large{Center for Electrical Engineering and Informatics}}\\
+  {\large{Graduate Program in Electrical Engineering}}
 \end{minipage}
 \begin{minipage}[t]{2cm}\centering\raisebox{\dimexpr\topskip-\height}%
 {\includegraphics[width=2cm]{ceei}}
