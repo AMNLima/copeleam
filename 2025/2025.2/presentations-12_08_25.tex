@@ -1,7 +1,6 @@
-\documentclass{beamer}
-\usetheme{Boadilla}
-
-
+\documentclass[tikz]{beamer}
+\usetheme{Berkeley}
+\usepackage{pgfgantt}
 \title{Orchestration Technique of Intelligent Microservices on the Edge Computing \\in \\ High-Resource-Constraint Devices}
 %btitle{Using beamer for presentations}
 \author{Caio Jos\'e Borba Vilar Guimar\~aes}
@@ -41,9 +40,10 @@ To develop, evaluate, and validate a technique for orchestrating intelligent mic
 \subsection{Specific Objectives}
 \begin{frame}
 \frametitle{Specific Objectives}
-\begin{list}{$\bullet$}
-    \item Study paradigms of orchestration techniques and protocols for collaborative distribution among contrained devices;
-    \item Design and develop a collaborative microservices orchestration technique tailored for high-restriction devices in distributed and cooperative environments, particularly in smart environments;
+\begin{list}{$\bullet$}{}
+    \item Study paradigms of orchestration techniques and protocols for collaborative distribution among contrained devices;\\
+
+    \item Design and develop a technique tailored for high-restriction devices in distributed and cooperative environments, particularly in smart environments;
     \item Simulate existing state-of-the-art techniques in smart environments to evaluate their performance in terms of transmission rate, energy consumption, and scalability in microservices deployment;
     \item Develop an infrastructure with high-restriction devices and diverse communication technologies (wired and wireless) to test selected techniques in scenarios closely resembling real-world IoT environments;
 \end{list}
@@ -51,13 +51,167 @@ To develop, evaluate, and validate a technique for orchestrating intelligent mic
 
 \begin{frame}
 \frametitle{Specific Objectives}
-\begin{list}{$\bullet$}
+\begin{list}{$\bullet$}{}
     \item Implement and evaluate AI microservices (Machine Learning and Deep Learning models)—assessing accuracy, inference latency, and provisioning time in both simulated and real IoT environments;
     \item Develop new methods and algorithms for orchestration and cooperative control of intelligent microservices, optimizing the use of limited resources and mitigating the limitations of existing techniques;
     \item Analyze and compare the performance of simulation and real-world implementations, refining techniques and protocols based on empirical data;
     \item Ensure the developed protocols are feasible and conformant, applying formal analysis methods to verify their viability considering system constraints like memory and processing power;
+\end{list}
+\end{frame}
+
+\begin{frame}
+\frametitle{Specific Objectives}
+\begin{list}{$\bullet$}{}
     \item Optimize existing algorithms and protocols by improving efficiency and reducing resource consumption, adapting based on feedback from initial implementations and tests 
 \end{list}
+\end{frame}
+\section{State of the Art}
+\begin{frame}
+\frametitle{State of the Art}
+\begin{list}{$\bullet$}{}
+    \item Edge Computing in Smart Environments: Emphasis on processing data locally at the network edge to reduce latency, bandwidth usage, and dependence on cloud services, enabling real-time applications in smart cities, industry, and surveillance;
+    \item Challenges in Edge-Oriented IoT/IIoT Systems: Addressing issues like standardization, security, limited processing power, and model complexity of AI algorithms on low-resource devices;
+    \item Distributed Orchestration of Microservices: Developing techniques for managing and coordinating microservices among resource-constrained devices without centralized control, improving scalability, robustness, and efficiency;
+    
+\end{list}
+\end{frame}
+
+\begin{frame}
+\frametitle{State of the Art}
+\begin{list}{$\bullet$}{}
+    \item Collaborative Processing and Resource Sharing: Enabling multiple devices to work together collaboratively, composing services dynamically while considering constraints like latency, energy consumption, and network variability;
+    \item AI and Machine Learning in Edge Devices: Implementing and evaluating intelligent models (ML and Deep Learning) directly on edge devices for real-time decision making, considering resource limitations and the need for local data processing;
+    
+\end{list}
+\end{frame}
+
+\begin{frame}
+\frametitle{State of the Art}
+\begin{list}{$\bullet$}{}
+    \item Simulation and Validation in Realistic Environments: Using simulation tools to assess techniques' performance before deployment in real IoT setups, ensuring viability and scalability;
+    \item Protocols and Algorithms for Resource-Constrained Networks: Designing communication protocols and scheduling algorithms tailored to highly restricted devices operating cooperatively in dynamic environments
+    
+\end{list}
+\end{frame}
+
+\section{Methodology}
+\begin{frame}
+\frametitle{Methodology}
+\begin{list}{$\bullet$}{}
+    \item Literature Review of Existing Techniques;
+    \item Design of Collaborative Edge Microservice Architecture;
+    \item Development of Dynamic Collaborative Orchestration and Scheduling Algorithms;
+    \item Implementation of Protocols for Device Communication;
+    \item Simulation of Proposed Techniques in Controlled Environments;
+    \item Performance Evaluation Using Metrics (latency, energy consumption, throughput);
+    \item Validation in IoT and Real-World Environments;
+    \item Comparative Analysis with Baseline Methods;
+    \item Iterative Optimization Based on Test Results;
+    \item Documentation.
+\end{list}
+\end{frame}
+
+\section{Expected Contributions}
+\begin{frame}
+\frametitle{Expected Contributions}
+\begin{list}{$\bullet$}{}
+    \item Development of an innovative microservice orchestration technique for resource-constrained devices;
+    \item Design of a scalable, collaborative edge computing architecture;
+    \item Protocols for device communication agnostic of specific technologies;
+    \item Algorithms for dynamic task scheduling and resource allocation;
+    \item Performance benchmarks in simulated and real IoT environments;
+\end{list}
+\end{frame}
+
+\begin{frame}
+\frametitle{Expected Contributions}
+\begin{list}{$\bullet$}{}
+    \item Enhanced efficiency and reduced energy consumption in edge systems;
+    \item Validation of microsservice-based AI applications in smart environments;
+    \item Contribution to scalable, real-time processing solutions for smart city applications;
+    \item Framework for integrating high-restriction devices into distributed EC systems;
+    \item Facilitation of interoperability among heterogeneous communication technologies.
+\end{list}
+\end{frame}
+
+\section{Project Timeline}
+\begin{frame}
+    \begin{itemize}
+        \item \textbf{1st Semester}
+        \begin{itemize}
+        \item Study of the state of the art (January 2024 – June 2024)
+        \end{itemize}
+
+        \item \textbf{2nd Semester}
+        \begin{itemize}
+        \item Simulation of techniques (July 2024 – December 2024)
+        \end{itemize}
+
+        \item \textbf{End of Year 1}
+        \begin{itemize}
+        \item Research communication: present initial results and challenges (February 2025 – March 2025)
+        \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item \textbf{3rd Semester}
+        \begin{itemize}
+        \item Development of AI microservices (April 2025 – September 2025)
+        \end{itemize}
+
+        \item \textbf{4th Semester}
+        \begin{itemize}
+        \item Testing in IoT environment (October 2025 – March 2026)
+        \end{itemize}
+
+        \item \textbf{End of Year 2}
+        \begin{itemize}
+        \item Research communication: present intermediate results and impact of optimizations (May 2026 – June 2026)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item \textbf{5th Semester}
+        \begin{itemize}
+        \item Qualification exam (July 2026 – December 2026)
+        \end{itemize}
+
+        \item \textbf{6th Semester}
+        \begin{itemize}
+        \item Algorithm optimization (January 2027 – June 2027)
+        \end{itemize}
+
+        \item \textbf{End of Year 3}
+        \begin{itemize}
+        \item Research communication: present intermediate results and impact of optimizations (July 2027 – August 2027)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item \textbf{7th Semester}
+        \begin{itemize}
+        \item Protocol development (September 2027 – February 2028)
+        \end{itemize}
+
+        \item \textbf{8th Semester}
+        \begin{itemize}
+        \item Thesis writing and revision (March 2028 – August 2028)
+        \end{itemize}
+
+        \item \textbf{Thesis defense}
+        \begin{itemize}
+        \item Defense of the thesis (September 2028)
+        \end{itemize}
+    \end{itemize}
+
+
 \end{frame}
 
 
