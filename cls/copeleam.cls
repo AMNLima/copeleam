@@ -306,16 +306,24 @@
 %  \null\vfil
 %  \vspace{-20ex}
 \noindent
-\begin{minipage}[t]{2cm}\centering\raisebox{\dimexpr\topskip-\height}%
-{\includegraphics[width=2cm]{ufcg}}
+
+\noindent
+\begin{minipage}[c]{2cm}
+    \centering
+    \includegraphics[width=2cm]{ufcg}
 \end{minipage}\hfill
-\begin{minipage}[t]{\textwidth-2cm}\centering
-{\large{Universidade Federal de Campina Grande}}\\
-{\large{Centro de Engenharia El\'{e}trica e Inform\'{a}tica}}\\
-{\large{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica}}
-\end{minipage}\vskip 4em%
-  \begin{center}%
-    {\LARGE \@Titulo \par}%
+\begin{minipage}[c]{\dimexpr\textwidth-4cm-2em}\centering
+    {\large Universidade Federal de Campina Grande}\\
+    {\large Centro de Engenharia Elétrica e Informática}\\
+    {\large Programa de Pós-Graduação em Engenharia Elétrica}
+\end{minipage}\hfill
+\begin{minipage}[c]{2cm}
+    \centering
+    \includegraphics[width=2cm]{CEEI}
+\end{minipage}
+\vfill
+\begin{center}%
+ {\LARGE \@Titulo \par}%
     {\LARGE
     \vskip 2em%
       \begin{tabular}[t]{c}%
