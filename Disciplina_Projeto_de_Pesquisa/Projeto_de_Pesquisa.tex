@@ -1,0 +1,63 @@
+\documentclass[]{article}
+\usepackage{times}
+
+\usepackage[a4paper, margin=1.181in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs, tabularx, wrapfig}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{hidelinks}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem, array}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{titlesec}
+\titlespacing{\title}{0pt}{*0.5cm}{*0.5cm} % adjust the spacing as needed
+\setlength{\headheight}{90pt} % Set the header height
+\addtolength{\topmargin}{-70pt} % Optional: Adjust top margin
+
+\pagestyle{fancy}
+% Variaveis de cabeçalho
+\newcommand\TITULOPROJETO{T\'ITULO DO PROJETO}
+\newcommand\NUMERODECREDITOS{500}
+\newcommand\PERIODO{2035.2}
+\newcommand\NOMEALUNO{Fulano de Tal}
+\newcommand\NOMEORIENTADOR{Prof. Dr. Sicrano de Silva}
+\newcommand\NOMECOORIENTADOR{Prof. Dr. Beltrano de Souza}
+
+% Clear default header and footer
+\fancyhf{}
+
+% Define header content
+
+\fancyhead[L]{\includegraphics[width=0.8in]{figs/ufcg.eps}} % Left image (0.8 inches wide)
+% Centered text in the header
+\fancyhead[C]{ % Center text
+    Universidade Federal de Campina Grande \\ 
+    Centro de Engenharia El\'{e}trica e Inform\'{a}tica \\ 
+    Programa de P\'os-Gradua\c{c}\~{a}o em Engenharia El\'{e}trica
+}
+% Right image in the header
+\fancyhead[R]{\includegraphics[width=0.8in]{figs/CEEI.eps}} % Right image (0.8 inches wide)
+
+\title{\textbf{PROPOSTA DE DISCIPLINA}}
+\author{}
+\date{}
+
+\begin{document}
+    \maketitle
+    \thispagestyle{fancy} % Apply header to the first page
+    \input{preamble.tex}
+    \newpage
+    \thispagestyle{plain}
+    \Large{\textbf{\TITULOPROJETO}}
+    \input{objetivo.tex}
+    % Check the following input files for errors in table environments:
+    \input{descricao.tex}
+    \input{revisao.tex}
+    \input{referencias.tex}
+    \input{cronograma.tex}
+\end{document}
